@@ -1,0 +1,91 @@
+body {
+	background-color: rgb(255, 255, 255);
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	height: 100vh;
+	max-width: 1200px;
+	margin: 0px auto;
+
+	.flex_element {
+		flex: 0 1 30%;
+		margin: 10px 0px 10px 0px;
+		display: flex;
+		flex-direction: column;
+
+		&:nth-child(5) {
+			border: 2px solid black;
+			box-shadow: 10px 10px 10px 0px rgb(50, 50, 50);
+			border-radius: 20px;
+		}
+
+		.gradient_window {
+			flex: 0 1 150px;
+			cursor: pointer;
+			border-radius: 20px;
+			z-index: 2;
+		}
+
+		.gradient_info {
+			flex: 0 1 40px;
+			transform: translateY(-110%);
+			transition: .4s;
+			align-items: center;
+
+			&.active {
+				transform: translateY(0%);
+			}
+
+			& p {
+				width: 130px;
+				margin: 0 auto;
+				font-family: 'Silkscreen', cursive;
+				border: 2px solid rgba(0, 0, 0, 0.55);
+				background-color: rgba(0, 0, 0, 0.55);
+				border-radius: 10px;
+				color: rgba(238, 238, 233, 0.91);
+				font-size: 30px;
+				line-height: 45px;
+				font-weight: 600;
+				text-align: center;
+			}
+		}
+
+	}
+
+	.description {
+		flex: 0 1 150px;
+		font-family: 'Silkscreen', cursive;
+		color: rgba(238, 238, 233, 0.91);
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 35px;
+		text-align: center;
+	}
+
+	.gradient_button {
+		margin: 5px 0px 5px 0px;
+		display: inline-block;
+		text-align: center;
+	}
+
+	.gradient_button button {
+		background: rgba(238, 238, 233, 0.91);
+		color: rgba(0, 0, 0, 0.884);
+		font-size: 20px;
+		line-height: 26px;
+		text-align: center;
+		border: 2px solid black;
+		border-radius: 5px;
+		padding: 5px 10px;
+	}
+}
+
+.center_container {
+	border: none;
+	background-color: rgba(0, 0, 0, 0.55);
+}
